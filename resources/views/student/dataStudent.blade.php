@@ -1,6 +1,6 @@
 @extends('student.mainStudent')
 
-@section('konten')
+@section('kontent')
 
 <!-- alert simpan & update -->
 @if(session('sukses'))
@@ -33,7 +33,7 @@
     		</div>
 
     		<div class="modal-body">
-    			<form  method="post" action="/student/store">
+    			<form  method="post" action="/student/add">
 					@csrf
 
 					<!-- nis -->
@@ -42,7 +42,7 @@
 						<input type="text" name="nis" class="form-control">
 					</div>
 
-					<!-- nama -->
+					<!-- name -->
 					<div class="form-group">
 						<label>Name :</label>
 						<input type="text" name="name" class="form-control">

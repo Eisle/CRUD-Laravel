@@ -26,7 +26,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Student
 Route::get('/student', 'StudentController@index');
-Route::post('/student/store', 'StudentController@store');
+Route::post('/student/add', 'StudentController@add');
+Route::get('/student/edit/{id}', 'StudentController@edit');
+Route::post('/student/update/{id}', 'StudentController@update');
+Route::get('/student/delete/{id}', 'StudentController@delete');
 
 // Rayon
 Route::get('/rayon', 'RayonController@rayon');
