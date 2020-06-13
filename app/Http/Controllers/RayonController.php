@@ -43,4 +43,13 @@ class RayonController extends Controller
 
         return redirect('/rayon')->with('sukses', 'Data berhasil diupdate');
     }
+
+    // delete
+    public function delete($id)
+    {
+        $rayon = \App\Rayon::find($id);
+        $rayon->delete();
+
+        return redirect('/rayon')->with('delete', 'Data berhasil dihapus');
+    }
 }

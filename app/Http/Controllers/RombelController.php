@@ -44,4 +44,12 @@ class RombelController extends Controller
         return redirect('/rombel')->with('sukses', 'Data berhasil diupdate');
     }
 
+    // delete
+    public function delete($id)
+    {
+        $rombel = \App\Rombel::find($id);
+        $rombel->delete();
+
+        return redirect('/rombel')->with('delete', 'Data berhasil dihapus');
+    }
 }
